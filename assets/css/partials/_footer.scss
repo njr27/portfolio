@@ -1,0 +1,169 @@
+.footer {
+    margin-top: calculator-rem(72);
+    display: inline-block;
+    background-color: $tertiary-color;
+    width: 100vw;
+    
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: $container-l;
+        padding: calculator-rem(72) 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        img {
+            width: 124px;
+            height: 124px;
+            border-radius: 50%;
+            border: 4px solid $secondary-color;
+        }
+        h4 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+            color: $grey-800;
+            margin-top: calculator-rem(12);
+        }
+        span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: $grey-700;
+            display: block;
+            margin-top:calculator-rem(12);
+        }
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: $grey-700;
+            margin-top: calculator-rem(24);
+        }
+
+        &--social {
+            display: flex;
+            align-items: center;
+            gap: calculator-rem(16);
+            margin-top: calculator-rem(32);
+
+            .social-icon {
+                width: 57px;
+                height: 57px;
+                border-radius: 50%;
+                background-color: $primary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    &::before {
+                        color: $secondary-color;
+                    }
+                }
+            }
+            .insta {
+                transition: 0.5s ease;
+                @include before-icon("\e926", 32px, $grey-800) {
+                }
+            }
+            .github {
+                transition: 0.5s ease;
+                @include before-icon("\e91d", 32px, $grey-800) {
+                }
+            }
+            .twitter {
+                transition: 0.5s ease;
+                @include before-icon("\e939", 32px, $grey-800) {
+                }
+            }
+        }
+    }
+
+    &__right {
+        h4 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+            color: $grey-800;
+        }
+        &--form {
+            margin-top: calculator-rem(24);
+            display: flex;
+            flex-direction: column;
+            gap: calculator-rem(20);
+
+            input,
+            textarea {
+                height: 48px;
+                background-color: $primary-color;
+                border: 1px solid $secondary-color;
+                border-radius: 5px;
+                padding: calculator-rem(15) calculator-rem(25);
+
+                &::placeholder {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: $grey-700;
+                }
+            }
+
+            textarea {
+                height: calculator-rem(125);
+                resize: none;
+            }
+            button {
+                height: 63px;
+                background: transparent;
+                border: 1px solid $secondary-color;
+                border-radius: 15px;
+                width: calculator-rem(191);
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 120%;
+                color: $grey-700;
+            }
+
+            &--button-wrapper {
+                margin-top: calculator-rem(4);
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__copyrights {
+        border-top: 1px solid $grey-300;
+        width: 100vw;
+        &--wrapper {
+            max-width: $container-l;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: calculator-rem(40) 0;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: $grey-700;
+
+            &--back-top{
+                @include after-icon("\e903", 32px, $grey-800) {
+                    margin-left: calculator-rem(15);
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,297 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: calculator-rem(64);
+
+    &__headline {
+        width: 48%;
+
+        h2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 120%;
+            color: $black-dark;
+        }
+
+        p {
+            margin-top: calculator-rem(48);
+            font-style: normal;
+            font-weight: 500;
+            font-size: calculator-rem(18);
+            line-height: 120%;
+            color: $grey-300;
+
+            img {
+                max-width: 32px;
+                display: inline-block;
+            }
+        }
+
+        &--wrapper {
+            margin-top: calculator-rem(48);
+            display: flex;
+        }
+    }
+
+    &__email {
+        display: flex;
+        align-items: flex-end;
+        a {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: $complementary-color;
+            transition: 0.3s ease;
+            writing-mode: vertical-lr;
+            position: relative;
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            &::after {
+                content: url(/assets/images/line-email.png);
+                position: absolute;
+                display: block;
+                left: 16%;
+                bottom: -175px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    margin-top: calculator-rem(48);
+
+    .icon-arrow-down {
+        @include before-icon("\e90a", 32px, $tertiary-color) {
+            margin-left: calculator-rem(32);
+            cursor: pointer;
+        }
+
+        animation: animated-arrow 0.8s ease infinite alternate;
+    }
+}
+
+.skills-content {
+    margin: calculator-rem(124) auto;
+    max-width: $container-l;
+
+    &--wrapper {
+        padding: 0 calculator-rem(12);
+        .section-description {
+            width: 60%;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            color: $grey-400;
+            font-size: calculator-rem(18);
+            margin-top: calculator-rem(32);
+        }
+
+        h3 {
+            margin-top: calculator-rem(62);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 120%;
+            color: $tertiary-color;
+            margin-bottom: calculator-rem(38);
+        }
+    }
+
+    &__card-content {
+        &--item {
+            background-color: $grey-800;
+            padding: 0 calculator-rem(38) calculator-rem(24) calculator-rem(38);
+
+            &--wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                .icon-figma {
+                    width: 61px;
+                    height: 84px;
+                    background-color: $primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include before-icon("\e918", 32px, $secondary-color) {
+                        cursor: pointer;
+                        display: block;
+                    }
+                }
+                .icon-code {
+                    width: 61px;
+                    height: 84px;
+                    background-color: $primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include before-icon("\e90d", 32px, $secondary-color) {
+                        cursor: pointer;
+                        display: block;
+                    }
+                }
+                .icon-star {
+                    width: 61px;
+                    height: 84px;
+                    background-color: $primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include before-icon("\e936", 32px, $secondary-color) {
+                        cursor: pointer;
+                        display: block;
+                    }
+                }
+
+                .icon-arrowright {
+                    @include before-icon("\e902", 32px, $primary-color) {
+                        cursor: pointer;
+                        display: block;
+                        font-weight: bold;
+                        margin-top: calculator-rem(18);
+                    }
+                }
+            }
+            p {
+                margin-top: calculator-rem(12);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 120%;
+                color: $tertiary-color;
+            }
+
+            h4 {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 120%;
+                color: $tertiary-color;
+                margin-top: calculator-rem(14);
+            }
+        }
+    }
+}
+
+.experience-content {
+    &__card-content {
+        margin-top: calculator-rem(40);
+        &--item {
+            background-color: $grey-800;
+            padding: calculator-rem(37) calculator-rem(44);
+
+            &--wrapper {
+                position: relative;
+                .experience--circle {
+                    width: 29px;
+                    height: 29px;
+                    background-color: $tertiary-color;
+                    opacity: 0.3;
+                    border-radius: 50%;
+                }
+
+                .monitor {
+                    position: absolute;
+                    top: -32%;
+                    left: 5%;
+                    @include before-icon("\e92d", 32px, $tertiary-color) {
+                    }
+                
+                }
+                .ui-design {
+                    position: absolute;
+                    top: -32%;
+                    left: 5%;
+                    @include before-icon("\e918", 32px, $tertiary-color) {
+                        font-weight: bold;
+                    }
+                }
+
+            }
+
+            h4 {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 120%;
+                color: $tertiary-color;
+                margin-top: calculator-rem(40);
+            }
+
+            &--office {
+                font-style: normal;
+                display: inline-block;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                color: $tertiary-color;
+                margin-top: calculator-rem(16);
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 120%;
+                color: $grey-300;
+                margin-top: calculator-rem(24);
+            }
+
+            &--date {
+                font-style: normal;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 120%;
+                color: $grey-300;
+                margin-top: calculator-rem(40);
+            }
+        }
+    }
+}
+
+.portfolio {
+    margin: calculator-rem(124) auto;
+    max-width: $container-l;
+
+    &__cards {
+        display: flex;
+
+        &--wrapper {
+            margin-top: calculator-rem(40);
+            img {
+                width: 100%;
+                height: 285px;
+                object-fit: cover;
+            }
+
+            h3 {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 120%;
+                color: $grey-400;
+                margin-top: calculator-rem(32);
+            }
+
+            strong {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 120%;
+                color: $grey-700;
+                margin-top: calculator-rem(16);
+                display: inline-block;
+            }
+        }
+    }
+}
