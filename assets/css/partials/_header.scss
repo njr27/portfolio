@@ -3,6 +3,11 @@
     align-items: center;
     justify-content: space-between;
     padding: calculator-rem(24) 0;
+    
+
+    @media screen and (max-width: 540px){      
+        padding-inline: calculator-rem(24);
+    }
 
     &__logo {
         font-family: "Be Vietinam Pro", sans-serif;
@@ -21,6 +26,10 @@
         &--menu {
             display: flex;
             align-items: center;
+
+            @media screen and (max-width: 540px){
+                display: none;
+            }
 
             &--link {
                 margin-right: calculator-rem(24);
@@ -46,6 +55,9 @@
     &__wrapper {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 540px){
+            display: none;
+        }
 
         .icon-sun {
             transition: 0.3s ease all;
@@ -54,9 +66,12 @@
             }
             &:hover {
                 transform: translateY(-2px);
+                cursor: pointer;
             }
         }
     }
+
+    
 
     
 }

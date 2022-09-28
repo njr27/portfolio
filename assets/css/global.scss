@@ -4,11 +4,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    //display: block;
     font-family: 'Raleway', sans-serif;
 }
 
 @import 'partials/colors';
+@import 'partials/mixins';
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     width: 100%;
@@ -24,8 +29,12 @@ $container-s: 540px;
     width: 100%;
     max-width: $container-l;
     margin: 0 auto;
-
     display: flex;
+    scroll-behavior: smooth;
+
+    @media screen and (max-width: 540px){
+        max-width: $container-s;
+    }
 }
 
 img,
@@ -48,7 +57,11 @@ li{
     font-weight: 700;
     font-size: 64px;
     line-height: 120%;
-    color: $black-dark
+    color: $black-dark;
+
+    @media screen and (max-width: 540px){
+        font-size: calculator-rem(32);
+    }
 }
 
 .section-title-image{
@@ -56,7 +69,7 @@ li{
 }
 
 
-@import 'partials/mixins';
+
 @import 'partials/typography';
 @import 'partials/layout';
 @import 'partials/buttons';

@@ -27,6 +27,12 @@
     display: flex;
     align-items: center;
     margin-left: calculator-rem(32);
+    transition: 0.5s;
+
+    &:hover{
+        opacity: 0.9;
+
+    }
     
     @include after-icon("\e904", 24px, $tertiary-color){
         margin-left: calculator-rem(8);
