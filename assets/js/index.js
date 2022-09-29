@@ -6,7 +6,7 @@ const footerLeft = document.querySelector('.footer__left')
 const footerRight = document.querySelector('.footer__right')
 const screenWidth = innerWidth
 
-if(screenWidth <= 540){   
+if(screenWidth <= 540){  
     for (let skill of skills){
         skill.classList.add('grid-12')
     }
